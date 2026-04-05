@@ -48,7 +48,7 @@ We utilized a modern, industry-standard stack to ensure performance and scalabil
 
 ### Quick Start
 
-**For the complete integration setup guide, see:** [INTEGRATION_SETUP.md](../INTEGRATION_SETUP.md)
+**For the complete integration setup guide, see:** [Integration Setup Guide](../docs/setup/integration-guide.md)
 
 ### Prerequisites
 - Node.js (v18 or higher)
@@ -60,48 +60,47 @@ We utilized a modern, industry-standard stack to ensure performance and scalabil
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd Major
+   cd Rainfall-Prediction-System-main/frontend
    ```
 
-2. **Install Dependencies**
+2. **Install frontend dependencies**
    ```bash
    npm install
    ```
 
-3. **Configure Environment**
-   
-   The `.env` file should contain:
+3. **Configure environment**
+   Create a `.env` file at `frontend/.env` with:
    ```bash
-   VITE_API_URL=http://localhost:5000  # Python backend URL
+   VITE_API_URL=http://localhost:5000
    ```
 
-4. **Start Development Server**
+4. **Start the frontend**
    ```bash
    npm run dev
    ```
 
    The app will be available at `http://localhost:8080`
 
-### Python Backend Setup
+### Backend Setup
 
-1. **Navigate to Python directory**
+1. **Navigate to backend directory**
    ```bash
-   cd ../Python
+   cd ../backend
    ```
 
-2. **Create virtual environment**
+2. **Create and activate a virtual environment**
    ```bash
    python -m venv venv
    venv\Scripts\activate  # Windows
    source venv/bin/activate  # macOS/Linux
    ```
 
-3. **Install dependencies**
+3. **Install backend dependencies**
    ```bash
    pip install -r requirements.txt
    ```
 
-4. **Start Flask server**
+4. **Start the backend**
    ```bash
    python app.py
    ```
@@ -110,18 +109,18 @@ We utilized a modern, industry-standard stack to ensure performance and scalabil
 
 ### Running Both Servers
 
-You need to run both servers simultaneously:
+Open two terminals and use these commands:
 
-**Terminal 1 (Python Backend):**
+**Terminal 1 (Backend):**
 ```bash
-cd Python
+cd Rainfall-Prediction-System-main/backend
 venv\Scripts\activate
 python app.py
 ```
 
-**Terminal 2 (React Frontend):**
+**Terminal 2 (Frontend):**
 ```bash
-cd Major
+cd Rainfall-Prediction-System-main/frontend
 npm run dev
 ```
 
@@ -129,27 +128,21 @@ npm run dev
 
 ## 📂 Project Structure
 ```
-Major/                    # React Frontend
+frontend/                # React frontend application
 ├── src/
-│   ├── components/       # Modular UI components
-│   │   ├── home/        # Landing page sections
-│   │   ├── prediction/  # Core prediction logic & forms
-│   │   ├── layout/      # Global layout (Footer, etc.)
-│   │   └── ui/          # Reusable design tokens (Buttons, Cards)
-│   ├── data/            # Static datasets (Regions, States)
+│   ├── components/      # Modular UI components
+│   ├── data/            # Static datasets (regions, states)
 │   ├── services/        # API integration layer
-│   │   └── predictionService.js  # Calls Python backend
-│   └── pages/           # Route controllers
-├── .env                 # Environment variables
-└── README.md           # This file
+│   └── pages/           # Routes and page layouts
+├── .env.example         # Frontend environment template
+└── README.md            # Frontend docs
 
-Python/                  # ML Backend
-├── app.py              # Flask API server
-├── model.py            # ML model wrapper
-├── data_processor.py   # Data preprocessing
-├── rainfall.csv        # Historical data (1901-2015)
-├── requirements.txt    # Python dependencies
-└── README.md          # Python backend docs
+backend/                 # Python ML backend and API
+├── core/                # Model, database, and utility modules
+├── instance/            # SQLite database and generated artifacts
+├── requirements.txt     # Backend Python dependencies
+├── app.py               # Flask API server
+└── README.md            # Backend docs
 ```
 
 ---
@@ -181,15 +174,16 @@ const response = await fetch('http://localhost:5000/api/predict', {
 
 ### Test Frontend Only
 ```bash
-cd Major
+cd Rainfall-Prediction-System-main/frontend
 npm run dev
 ```
-Note: Will use fallback simulated data if Python backend is not running.
+Note: The frontend will gracefully fall back to simulated data if the Python backend is not running.
 
 ### Test Backend Only
 ```bash
-cd Python
+cd Rainfall-Prediction-System-main/backend
 python app.py
+```
 
 # In another terminal, test with curl:
 curl -X POST http://localhost:5000/api/predict \
@@ -210,27 +204,27 @@ curl -X POST http://localhost:5000/api/predict \
 
 ### Backend Not Connecting
 - Ensure Python server is running on port 5000
-- Check `.env` file has correct `VITE_API_URL`
+- Check `frontend/.env` has correct `VITE_API_URL`
 - Restart React dev server after changing `.env`
 
 ### CORS Errors
 - Python backend has CORS configured for localhost:8080
-- If using different port, update `app.py` CORS settings
+- If using a different port, update `app.py` CORS settings
 
 ### Module Not Found (Python)
 ```bash
+cd Rainfall-Prediction-System-main/backend
 pip install -r requirements.txt
 ```
 
-For more troubleshooting, see [INTEGRATION_SETUP.md](../INTEGRATION_SETUP.md)
+For more troubleshooting, see [Integration Setup Guide](../docs/setup/integration-guide.md)
 
 ---
 
 ## 📚 Documentation
 
-- **Integration Guide**: [INTEGRATION_SETUP.md](../INTEGRATION_SETUP.md)
-- **Python Backend**: [Python/README.md](../Python/README.md)
-- **Implementation Plan**: [implementation_plan.md](../.gemini/antigravity/brain/fbb8fe76-9ee9-4661-87db-0e0b7018c089/implementation_plan.md)
+- **Integration Guide**: [Integration Setup Guide](../docs/setup/integration-guide.md)
+- **Backend README**: [Backend README](../backend/README.md)
 
 ---
 

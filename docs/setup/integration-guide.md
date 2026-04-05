@@ -18,8 +18,8 @@ This guide will help you set up and run both the Python ML backend and React fro
 ### Step 1: Set Up Python Backend
 
 ```bash
-# Navigate to Python directory
-cd Python
+# Navigate to backend directory
+cd backend
 
 # Create virtual environment (recommended)
 python -m venv venv
@@ -44,8 +44,8 @@ The Python API will start on **http://localhost:5000**
 Open a **new terminal window** and:
 
 ```bash
-# Navigate to Major directory
-cd Major
+# Navigate to frontend directory
+cd frontend
 
 # Install dependencies (if not already done)
 npm install
@@ -68,12 +68,12 @@ The React app will start on **http://localhost:8080**
 
 ### Python Backend Setup
 
-1. **Navigate to Python directory**
+1. **Navigate to backend directory**
    ```bash
-   cd "c:/Users/91997/Desktop/7th Sem/Major CD 2026/Major CD 2026/Python"
+   cd ../../backend
    ```
 
-2. **Create and activate virtual environment**
+2. **Create and activate a virtual environment**
    ```bash
    python -m venv venv
    venv\Scripts\activate  # Windows
@@ -102,9 +102,9 @@ The React app will start on **http://localhost:8080**
 
 ### React Frontend Setup
 
-1. **Navigate to Major directory**
+1. **Navigate to frontend directory**
    ```bash
-   cd "c:/Users/91997/Desktop/7th Sem/Major CD 2026/Major CD 2026/Major"
+   cd ../../frontend
    ```
 
 2. **Install dependencies** (if not already done)
@@ -135,14 +135,14 @@ The React app will start on **http://localhost:8080**
 
 **Terminal 1 - Python Backend:**
 ```bash
-cd Python
+cd backend
 venv\Scripts\activate
 python app.py
 ```
 
 **Terminal 2 - React Frontend:**
 ```bash
-cd Major
+cd frontend
 npm run dev
 ```
 
@@ -155,7 +155,7 @@ You can install `concurrently` to run both servers from one command:
 npm install -g concurrently
 
 # Create a script to run both
-concurrently "cd Python && python app.py" "cd Major && npm run dev"
+concurrently "cd backend && python app.py" "cd frontend && npm run dev"
 ```
 
 ## Verification
@@ -319,11 +319,11 @@ gunicorn -w 4 -b 0.0.0.0:5000 app:app
 Build for production:
 
 ```bash
-cd Major
+cd frontend
 npm run build
 ```
 
-The built files will be in `Major/dist/` directory.
+The built files will be in `frontend/dist/` directory.
 
 ## Environment Variables
 

@@ -335,8 +335,8 @@ Future versions will be indicated in the health check response.
 ## Support
 
 For issues or questions about the API:
-1. Check the [Integration Setup Guide](INTEGRATION_SETUP.md)
-2. Review the [Python Backend README](Python/README.md)
+1. Check the [Integration Setup Guide](../setup/integration-guide.md)
+2. Review the [Backend README](../backend/README.md)
 3. Check server logs for detailed error messages
 
 ---
@@ -344,7 +344,7 @@ For issues or questions about the API:
 ## Authors
 - Devansh Verma
 - Jatin Saini
-- Anant Sharma
+- Vasu Soni
 - Krishna Yadav
 
 ---

@@ -24,9 +24,9 @@ This is the Python Flask backend that serves the Machine Learning model for rain
 
 ### Installation
 
-1. **Navigate to Python directory**
+1. **Navigate to backend directory**
    ```bash
-   cd Python
+   cd backend
    ```
 
 2. **Create virtual environment (recommended)**

@@ -46,7 +46,7 @@ To get the most out of the system, create an environment file for both the serve
 **Frontend (`frontend/.env`):**
 ```env
 VITE_OPENWEATHER_API_KEY=your_key_here
-VITE_API_BASE_URL=http://localhost:5000/api
+VITE_API_URL=http://localhost:5000
 ```
 
 **Backend (`backend/.env`):**
