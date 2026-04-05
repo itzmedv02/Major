@@ -138,14 +138,20 @@ const Prediction = () => {
                   </div>
                   
                   <CardContent className="p-6">
-                    <div className="grid gap-4 sm:grid-cols-2 mb-6">
+                    <div className="grid gap-4 sm:grid-cols-3 mb-6">
                       <div className="rounded-2xl border border-muted/20 bg-muted/5 p-4">
                         <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Prediction Model</p>
                         <p className="mt-2 text-lg font-semibold">{result.metadata.model || 'Unknown'}</p>
                       </div>
                       <div className="rounded-2xl border border-muted/20 bg-muted/5 p-4">
-                        <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Prediction Source</p>
-                        <p className="mt-2 text-lg font-semibold">{result.metadata.source || 'Model output'}</p>
+                        <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Historical Baseline</p>
+                        <p className="mt-2 text-lg font-semibold">{result.historicalAnnualAvg ? `${result.historicalAnnualAvg} mm` : 'N/A'}</p>
+                      </div>
+                      <div className="rounded-2xl border border-muted/20 bg-muted/5 p-4">
+                        <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Anomaly</p>
+                        <p className={`mt-2 text-lg font-semibold ${typeof result.anomalyAnnual === 'number' && result.anomalyAnnual >= 0 ? 'text-emerald-600' : 'text-rose-600'}`}>
+                          {typeof result.anomalyAnnual === 'number' ? `${result.anomalyAnnual > 0 ? '+' : ''}${result.anomalyAnnual} mm` : 'N/A'}
+                        </p>
                       </div>
                     </div>
 

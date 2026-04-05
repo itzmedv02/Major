@@ -64,11 +64,19 @@ class RainfallPredictor:
                     {"season": "Oct-Dec (Post-Monsoon)", "rainfall": round(pred_oct_dec, 1)}
                 ]
                 
+                historical = self.processor.get_historical_average(subdivision)
+                annual_baseline = round(historical['annual_avg'], 1) if historical else None
+                monsoon_baseline = round(historical['monsoon_avg'], 1) if historical else None
+                anomaly = round(predicted_annual - annual_baseline, 1) if historical else None
+
                 return {
                     'predictedAnnual': round(predicted_annual, 1),
                     'predictedMonsoon': round(predicted_monsoon, 1),
                     'confidence': round(confidence, 1),
                     'seasonalData': seasonal_data,
+                    'historicalAnnualAvg': annual_baseline,
+                    'historicalMonsoonAvg': monsoon_baseline,
+                    'anomalyAnnual': anomaly,
                     'metadata': {
                         'subdivision': subdivision,
                         'year': year,
@@ -103,12 +111,18 @@ class RainfallPredictor:
         ]
         
         base_confidence = 80.0
-        
+        annual_baseline = round(historical['annual_avg'], 1)
+        monsoon_baseline = round(historical['monsoon_avg'], 1)
+        anomaly = round(predicted_annual - annual_baseline, 1)
+
         return {
             'predictedAnnual': round(predicted_annual, 1),
             'predictedMonsoon': round(predicted_monsoon, 1),
             'confidence': round(base_confidence, 1),
             'seasonalData': seasonal_data,
+            'historicalAnnualAvg': annual_baseline,
+            'historicalMonsoonAvg': monsoon_baseline,
+            'anomalyAnnual': anomaly,
             'metadata': {
                 'subdivision': subdivision,
                 'year': year,
