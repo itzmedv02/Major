@@ -4,9 +4,9 @@
  * Falls back to simulated data if the backend is unavailable.
  */
 
-// Get API URL from environment variable, fallback to localhost
+// Get API URL from environment variable, fallback to live Render backend
 const apiUrl = import.meta.env.VITE_API_URL;
-const API_URL = apiUrl ? apiUrl.replace(/\/+$/, '') : 'http://localhost:5000';
+const API_URL = apiUrl ? apiUrl.replace(/\/+$/, '') : 'https://major-8332.onrender.com';
 
 /**
  * Predict rainfall using the Python ML model API
