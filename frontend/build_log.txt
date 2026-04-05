@@ -1,0 +1,33 @@
+
+> vite_react_shadcn_js@0.0.0 build
+> vite build
+
+[36mvite v7.1.12 [32mbuilding for production...[36m[39m
+transforming...
+Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[32m✓[39m 117 modules transformed.
+[31m✗[39m Build failed in 8.09s
+[31merror during build:
+[31m[vite:esbuild] Transform failed with 1 error:
+C:/Users/91997/Desktop/7th Sem/Geminie/Major/Major/src/components/ui/badge.jsx:29:9: ERROR: Multiple exports with the same name "Badge"[31m
+file: [36mC:/Users/91997/Desktop/7th Sem/Geminie/Major/Major/src/components/ui/badge.jsx:29:9[31m
+[33m
+[33mMultiple exports with the same name "Badge"[33m
+27 |  }
+28 |  
+29 |  export { Badge, badgeVariants };
+   |           ^
+30 |  
+[31m
+    at failureErrorWithLog (C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\node_modules\esbuild\lib\main.js:1467:15)
+    at C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\node_modules\esbuild\lib\main.js:736:50
+    at responseCallbacks.<computed> (C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\node_modules\esbuild\lib\main.js:603:9)
+    at handleIncomingPacket (C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\node_modules\esbuild\lib\main.js:658:12)
+    at Socket.readFromStdout (C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\node_modules\esbuild\lib\main.js:581:7)
+    at Socket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)[39m

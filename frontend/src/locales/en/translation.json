@@ -1,0 +1,18 @@
+{
+  "nav": {
+    "dashboard": "Dashboard",
+    "predict": "Predict",
+    "history": "History",
+    "about": "About"
+  },
+  "dashboard": {
+    "overview": "Overview",
+    "subtitle": "Welcome to AgriRaincast. Monitor trends and predict future rainfall.",
+    "runPrediction": "Run Prediction",
+    "weather": "Local Weather",
+    "status": "System Status",
+    "location": "Location",
+    "welcome": "Welcome to the Next Generation Predictor",
+    "welcomeDesc": "The backend is now powered by robust Machine Learning algorithms (RandomForest Regressors) to predict rainfall patterns by subdivision. Get started by heading to the Prediction section."
+  }
+}

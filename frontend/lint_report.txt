@@ -1,0 +1,249 @@
+
+> vite_react_shadcn_js@0.0.0 lint
+> eslint .
+
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\App.jsx
+  1:10  warning  'Toaster' is defined but never used              no-unused-vars
+  2:21  warning  'Sonner' is defined but never used               no-unused-vars
+  3:10  warning  'TooltipProvider' is defined but never used      no-unused-vars
+  4:23  warning  'QueryClientProvider' is defined but never used  no-unused-vars
+  5:10  warning  'BrowserRouter' is defined but never used        no-unused-vars
+  5:25  warning  'Routes' is defined but never used               no-unused-vars
+  5:33  warning  'Route' is defined but never used                no-unused-vars
+  6:8   warning  'Index' is defined but never used                no-unused-vars
+  7:8   warning  'NotFound' is defined but never used             no-unused-vars
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\components\PredictionResult.jsx
+  13:36  error  Parsing error: Unexpected token .
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\components\RainfallChart.jsx
+  1:10  warning  'Card' is defined but never used                 no-unused-vars
+  1:16  warning  'CardContent' is defined but never used          no-unused-vars
+  1:29  warning  'CardDescription' is defined but never used      no-unused-vars
+  1:46  warning  'CardHeader' is defined but never used           no-unused-vars
+  1:58  warning  'CardTitle' is defined but never used            no-unused-vars
+  2:10  warning  'LineChart' is defined but never used            no-unused-vars
+  2:21  warning  'Line' is defined but never used                 no-unused-vars
+  2:27  warning  'XAxis' is defined but never used                no-unused-vars
+  2:34  warning  'YAxis' is defined but never used                no-unused-vars
+  2:41  warning  'CartesianGrid' is defined but never used        no-unused-vars
+  2:56  warning  'Tooltip' is defined but never used              no-unused-vars
+  2:65  warning  'Legend' is defined but never used               no-unused-vars
+  2:73  warning  'ResponsiveContainer' is defined but never used  no-unused-vars
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\components\home\HeroSection.jsx
+  1:10  warning  'Cloud' is defined but never used       no-unused-vars
+  1:17  warning  'TrendingUp' is defined but never used  no-unused-vars
+  2:10  warning  'Button' is defined but never used      no-unused-vars
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\components\home\InfoSection.jsx
+  1:10  warning  'Card' is defined but never used         no-unused-vars
+  1:16  warning  'CardHeader' is defined but never used   no-unused-vars
+  1:28  warning  'CardTitle' is defined but never used    no-unused-vars
+  1:39  warning  'CardContent' is defined but never used  no-unused-vars
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\components\home\StatsSection.jsx
+  1:10  warning  'Database' is defined but never used     no-unused-vars
+  1:20  warning  'Cloud' is defined but never used        no-unused-vars
+  1:27  warning  'Droplets' is defined but never used     no-unused-vars
+  2:10  warning  'Card' is defined but never used         no-unused-vars
+  2:16  warning  'CardHeader' is defined but never used   no-unused-vars
+  2:28  warning  'CardTitle' is defined but never used    no-unused-vars
+  2:39  warning  'CardContent' is defined but never used  no-unused-vars
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\components\prediction\PredictionForm.jsx
+   1:10  warning  'Droplets' is defined but never used         no-unused-vars
+   3:5   warning  'Card' is defined but never used             no-unused-vars
+   4:5   warning  'CardHeader' is defined but never used       no-unused-vars
+   5:5   warning  'CardTitle' is defined but never used        no-unused-vars
+   6:5   warning  'CardDescription' is defined but never used  no-unused-vars
+   7:5   warning  'CardContent' is defined but never used      no-unused-vars
+   9:10  warning  'Label' is defined but never used            no-unused-vars
+  11:5   warning  'Select' is defined but never used           no-unused-vars
+  12:5   warning  'SelectContent' is defined but never used    no-unused-vars
+  13:5   warning  'SelectItem' is defined but never used       no-unused-vars
+  14:5   warning  'SelectTrigger' is defined but never used    no-unused-vars
+  15:5   warning  'SelectValue' is defined but never used      no-unused-vars
+  17:10  warning  'Button' is defined but never used           no-unused-vars
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\components\prediction\PredictionResult.jsx
+  1:10  warning  'Card' is defined but never used             no-unused-vars
+  1:16  warning  'CardContent' is defined but never used      no-unused-vars
+  1:29  warning  'CardDescription' is defined but never used  no-unused-vars
+  1:46  warning  'CardHeader' is defined but never used       no-unused-vars
+  1:58  warning  'CardTitle' is defined but never used        no-unused-vars
+  2:10  warning  'Badge' is defined but never used            no-unused-vars
+  3:10  warning  'CloudRain' is defined but never used        no-unused-vars
+  3:21  warning  'Droplets' is defined but never used         no-unused-vars
+  3:31  warning  'Calendar' is defined but never used         no-unused-vars
+  3:41  warning  'TrendingUp' is defined but never used       no-unused-vars
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\components\prediction\RainfallChart.jsx
+   2:3  warning  'Card' is defined but never used                 no-unused-vars
+   3:3  warning  'CardContent' is defined but never used          no-unused-vars
+   4:3  warning  'CardDescription' is defined but never used      no-unused-vars
+   5:3  warning  'CardHeader' is defined but never used           no-unused-vars
+   6:3  warning  'CardTitle' is defined but never used            no-unused-vars
+   9:3  warning  'LineChart' is defined but never used            no-unused-vars
+  10:3  warning  'Line' is defined but never used                 no-unused-vars
+  11:3  warning  'XAxis' is defined but never used                no-unused-vars
+  12:3  warning  'YAxis' is defined but never used                no-unused-vars
+  13:3  warning  'CartesianGrid' is defined but never used        no-unused-vars
+  14:3  warning  'Tooltip' is defined but never used              no-unused-vars
+  15:3  warning  'Legend' is defined but never used               no-unused-vars
+  16:3  warning  'ResponsiveContainer' is defined but never used  no-unused-vars
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\components\ui\accordion.jsx
+  3:10  warning  'ChevronDown' is defined but never used  no-unused-vars
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\components\ui\alert.jsx
+  2:20  error  Parsing error: Unexpected token VariantProps
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\components\ui\badge.jsx
+  2:20  error  Parsing error: Unexpected token VariantProps
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\components\ui\breadcrumb.jsx
+  52:84  error  Parsing error: Unexpected token )
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\components\ui\button.jsx
+  3:20  error  Parsing error: Unexpected token VariantProps
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\components\ui\calendar.jsx
+  52:10  error  Parsing error: Duplicate export 'Calendar'
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\components\ui\carousel.jsx
+  2:33  error  Parsing error: Unexpected token UseEmblaCarouselType
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\components\ui\chart.jsx
+  2:10  error  Parsing error: Unexpected token from
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\components\ui\checkbox.jsx
+  3:10  warning  'Check' is defined but never used  no-unused-vars
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\components\ui\command.jsx
+  2:15  error  Parsing error: Unexpected token DialogProps
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\components\ui\context-menu.jsx
+  3:10  warning  'Check' is defined but never used         no-unused-vars
+  3:17  warning  'ChevronRight' is defined but never used  no-unused-vars
+  3:31  warning  'Circle' is defined but never used        no-unused-vars
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\components\ui\dialog.jsx
+  3:10  warning  'X' is defined but never used  no-unused-vars
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\components\ui\drawer.jsx
+  6:7  error  Parsing error: Identifier 'Drawer' has already been declared
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\components\ui\dropdown-menu.jsx
+  3:10  warning  'Check' is defined but never used         no-unused-vars
+  3:17  warning  'ChevronRight' is defined but never used  no-unused-vars
+  3:31  warning  'Circle' is defined but never used        no-unused-vars
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\components\ui\form.jsx
+  11:6  error  Parsing error: Unexpected token FormFieldContextValue
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\components\ui\input-otp.jsx
+  2:10  warning  'OTPInput' is defined but never used  no-unused-vars
+  3:10  warning  'Dot' is defined but never used       no-unused-vars
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\components\ui\label.jsx
+  3:20  error  Parsing error: Unexpected token VariantProps
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\components\ui\menubar.jsx
+  3:10  warning  'Check' is defined but never used         no-unused-vars
+  3:17  warning  'ChevronRight' is defined but never used  no-unused-vars
+  3:31  warning  'Circle' is defined but never used        no-unused-vars
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\components\ui\navigation-menu.jsx
+   4:10  warning  'ChevronDown' is defined but never used                                                                                         no-unused-vars
+  93:3   warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\components\ui\pagination.jsx
+  7:66  error  Parsing error: Unexpected token )
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\components\ui\radio-group.jsx
+  3:10  warning  'Circle' is defined but never used  no-unused-vars
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\components\ui\resizable.jsx
+  2:10  error  Parsing error: Unexpected token from
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\components\ui\select.jsx
+  3:10  warning  'Check' is defined but never used        no-unused-vars
+  3:17  warning  'ChevronDown' is defined but never used  no-unused-vars
+  3:30  warning  'ChevronUp' is defined but never used    no-unused-vars
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\components\ui\sheet.jsx
+  3:10  warning  'X' is defined but never used  no-unused-vars
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\components\ui\sidebar.jsx
+  23:26  error  Parsing error: Unexpected token ;
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\components\ui\sonner.jsx
+  25:19  error  Parsing error: Export 'toast' is not defined
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\components\ui\switch.jsx
+   2:13  warning  'SwitchPrimitive' is defined but never used  no-unused-vars
+  22:22  error    'SwitchPrimitives' is not defined            no-undef
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\components\ui\textarea.jsx
+  21:10  error  Parsing error: Duplicate export 'Textarea'
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\components\ui\toast.jsx
+  3:20  error  Parsing error: Unexpected token VariantProps
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\components\ui\toaster.jsx
+  2:10  warning  'Toast' is defined but never used             no-unused-vars
+  2:17  warning  'ToastClose' is defined but never used        no-unused-vars
+  2:29  warning  'ToastDescription' is defined but never used  no-unused-vars
+  2:47  warning  'ToastProvider' is defined but never used     no-unused-vars
+  2:62  warning  'ToastTitle' is defined but never used        no-unused-vars
+  2:74  warning  'ToastViewport' is defined but never used     no-unused-vars
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\components\ui\toggle-group.jsx
+  3:15  error  Parsing error: Unexpected token VariantProps
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\components\ui\toggle.jsx
+  3:20  error  Parsing error: Unexpected token VariantProps
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\hooks\use-toast.js
+  6:7  warning  'actionTypes' is assigned a value but never used  no-unused-vars
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\integrations\supabase\client.js
+  3:13  error  Parsing error: Unexpected token {
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\integrations\supabase\types.js
+  1:8  error  Parsing error: Unexpected token type
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\lib\utils.js
+  1:21  error  Parsing error: Unexpected token ClassValue
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\main.jsx
+  2:8  warning  'App' is defined but never used  no-unused-vars
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\pages\Index.jsx
+  3:8  warning  'HeroSection' is defined but never used       no-unused-vars
+  4:8  warning  'StatsSection' is defined but never used      no-unused-vars
+  5:8  warning  'InfoSection' is defined but never used       no-unused-vars
+  6:8  warning  'PredictionForm' is defined but never used    no-unused-vars
+  7:8  warning  'PredictionResult' is defined but never used  no-unused-vars
+  8:8  warning  'RainfallChart' is defined but never used     no-unused-vars
+  9:8  warning  'Footer' is defined but never used            no-unused-vars
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\src\services\predictionService.js
+   9:5  error    Definition for rule '@typescript-eslint/no-unused-vars' was not found  @typescript-eslint/no-unused-vars
+  10:5  warning  '_state' is defined but never used                                     no-unused-vars
+  11:5  error    Definition for rule '@typescript-eslint/no-unused-vars' was not found  @typescript-eslint/no-unused-vars
+  12:5  warning  '_subdivision' is defined but never used                               no-unused-vars
+  13:5  error    Definition for rule '@typescript-eslint/no-unused-vars' was not found  @typescript-eslint/no-unused-vars
+  14:5  warning  '_year' is defined but never used                                      no-unused-vars
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\tailwind.config.js
+  103:15  error  'require' is not defined  no-undef
+
+C:\Users\91997\Desktop\7th Sem\Geminie\Major\Major\vite.config.js
+   6:32  warning  'mode' is defined but never used  no-unused-vars
+  14:25  error    '__dirname' is not defined        no-undef
+
+✖ 142 problems (29 errors, 113 warnings)
+
