@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { getHistory } from '@/services/api';
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Badge } from "@/components/ui/badge";
+import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { motion } from 'framer-motion';
 import { Loader2 } from 'lucide-react';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
 const History = () => {
   const [history, setHistory] = useState([]);
@@ -24,6 +25,29 @@ const History = () => {
     fetchIt();
   }, []);
 
+  const stats = useMemo(() => {
+    if (!history.length) {
+      return null;
+    }
+
+    const values = history.map((run) => run.predictedAnnual);
+    const total = values.length;
+    const average = values.reduce((sum, value) => sum + value, 0) / total;
+    const max = Math.max(...values);
+    const min = Math.min(...values);
+
+    return {
+      total,
+      average: average.toFixed(1),
+      max: max.toFixed(1),
+      min: min.toFixed(1),
+      chartData: history.map((run) => ({
+        date: new Date(run.created_at).toLocaleDateString(),
+        predictedAnnual: run.predictedAnnual,
+      }))
+    };
+  }, [history]);
+
   return (
     <div className="space-y-6">
       <div>
@@ -32,6 +56,58 @@ const History = () => {
           Review previously generated predictions stored securely.
         </p>
       </div>
+
+      {stats && (
+        <div className="grid gap-4 lg:grid-cols-3">
+          <Card>
+            <CardHeader>
+              <CardTitle>Forecast Count</CardTitle>
+              <CardDescription>Total predictions saved</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="text-3xl font-semibold">{stats.total}</div>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader>
+              <CardTitle>Average Annual</CardTitle>
+              <CardDescription>Mean predicted rainfall</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="text-3xl font-semibold">{stats.average} mm</div>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader>
+              <CardTitle>Range</CardTitle>
+              <CardDescription>Min / Max predictions</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="text-lg font-semibold">{stats.min} mm / {stats.max} mm</div>
+            </CardContent>
+          </Card>
+        </div>
+      )}
+
+      {stats && (
+        <Card>
+          <CardHeader>
+            <CardTitle>Prediction Trend</CardTitle>
+            <CardDescription>Recent annual rainfall predictions over time.</CardDescription>
+          </CardHeader>
+          <CardContent className="h-[420px]">
+            <ResponsiveContainer width="100%" height="100%">
+              <LineChart data={stats.chartData} margin={{ top: 10, right: 20, left: 0, bottom: 0 }}>
+                <CartesianGrid strokeDasharray="3 3" opacity={0.2} />
+                <XAxis dataKey="date" tick={{ fontSize: 12 }} />
+                <YAxis tick={{ fontSize: 12 }} />
+                <Tooltip />
+                <Line type="monotone" dataKey="predictedAnnual" stroke="hsl(var(--primary))" strokeWidth={3} dot={{ r: 4 }} />
+              </LineChart>
+            </ResponsiveContainer>
+          </CardContent>
+        </Card>
+      )}
 
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
         <Card>
